@@ -1,0 +1,23 @@
+<header class="site-header">
+  <div class="container">
+    <!-- Site title + optional logo -->
+    <div class="site-branding">
+      <a href="{{ '/' | relative_url }}">
+        {% if site.logo %}
+          <img src="{{ site.logo | relative_url }}" alt="{{ site.title }} Logo" class="logo">
+        {% endif %}
+        <span class="site-title">{{ site.title }}</span>
+      </a>
+    </div>
+
+    <!-- Navigation links -->
+    <nav class="navbar">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <!-- <a href="{{ '/projects/' | relative_url }}">Projects</a>
+      <a href="{{ '/about/' | relative_url }}">About</a> -->
+      <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a>
+      <!-- <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:{{ site.email }}">Email</a> -->
+    </nav>
+  </div>
+</header>
