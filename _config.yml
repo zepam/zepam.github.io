@@ -33,6 +33,15 @@ theme: jekyll-theme-minimal
 collections:
   projects:
     output: true
+  talks:
+    output: true
+    permalink: /talks/:title/
+  papers:
+    output: true
+    permalink: /papers/:title/
+  posters:
+    output: true
+    permalink: /posters/:title/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

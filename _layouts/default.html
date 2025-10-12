@@ -22,5 +22,22 @@
       {{ content }}
     </main>
     {% include footer.html %}
+
+    <script>    // JavaScript to make images in project posts clickable and open in a new tab
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll(".project-content img").forEach(img => {
+      // Skip if the image is already inside a link
+      if (!img.closest("a")) {
+        const link = document.createElement("a");
+        link.href = img.src;        // make it link to itself
+        link.target = "_blank";     // open in a new tab
+        link.rel = "noopener";      // security best practice
+        img.parentNode.insertBefore(link, img);
+        link.appendChild(img);
+      }
+    });
+  });
+</script>
+
   </body>
 </html>

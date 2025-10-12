@@ -1,0 +1,22 @@
+---
+# _layouts/item.html
+---
+<article class="resume-item">
+  <h2 class="resume-title">
+    {% if page.link %}
+      <a href="{{ page.link }}">{{ page.title }}</a>
+    {% else %}
+      {{ page.title }}
+    {% endif %}
+  </h2>
+
+  <div class="resume-meta">
+    {% if page.venue %}{{ page.venue }}{% endif %}
+    {% if page.journal %}{{ page.journal }}{% endif %}
+    {% if page.date %} • {{ page.date }}{% endif %}
+  </div>
+
+  {% if page.description %}
+    <p class="resume-desc">{{ page.description }}</p>
+  {% endif %}
+</article>
