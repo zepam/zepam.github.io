@@ -2,9 +2,6 @@
 layout: item
 authors: 
         -  Wilson J
-        -  Lhawa Y
-        -  Chen J
-        -  Zhao C
 title: "Centering Community in Language Preservation - Building Speech Transcription for Khroskyabs"
 # journal: "Proceedings of the 24th Workshop on Biomedical Natural Language Processing. Association for Computational Linguistics. Vienna, Austria"
 venue: "Considering Cultural and Linguistic Diversity in AI Applications Workshop @ASIS&T"
