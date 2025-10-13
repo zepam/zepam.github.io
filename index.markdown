@@ -11,7 +11,7 @@ title: Home
 - B.A. History <span class="vline">|</span> University of Washington, Seattle
 
 ---
-### Projects
+## Projects
 
 <ul class="projects-list">
   {% for project in site.projects %}
@@ -31,7 +31,7 @@ title: Home
 </ul>
 
 ---
-### Invited Talks and Presentations
+## Invited Talks and Presentations
 
 <ul class="resume-list">
 {% assign sorted_talks = site.talks | sort: 'date' | reverse %}
@@ -66,7 +66,6 @@ title: Home
       {% endif %}
 
       {% if talk.link %}
-      <br>
         <span style="color: #007acc; font-weight: normal;">
           <a href="{{ talk.link | relative_url }}" 
             target="_blank" 
@@ -90,14 +89,13 @@ title: Home
         <a href="{{ talk.recording }}" target="_blank">Recording</a>
       {% endif %}
 
-
       </div>
     </li>
   {% endfor %}
 </ul>
 
 ---
-### Published Papers
+## Published Papers
 
 <ul class="resume-list">
   {% for paper in site.papers %}
@@ -125,10 +123,10 @@ title: Home
             {{ parsed_date }}.
           {% endif %}
         {% endif %}
-      </div>
+      
 
       {% if paper.description %}
-        <p>{{ paper.description }}</p>
+        {{ paper.description }}
       {% endif %}
       {% if paper.link %}
         <span style="color: #007acc; font-weight: normal;">
@@ -142,12 +140,13 @@ title: Home
           </a>
         </span>
     {% endif %}
+    </div>
     </li>
   {% endfor %}
 </ul>
 
 ---
-### Posters
+## Posters
 
 <ul class="resume-list">
   {% for poster in site.posters %}
@@ -169,11 +168,11 @@ title: Home
             {{ parsed_date }}
           {% endif %}
         {% endif %}
-      </div>
 
       {% if poster.description %}
         <p>{{ poster.description }}</p>
       {% endif %}
+      </div>
     </li>
   {% endfor %}
 </ul>
