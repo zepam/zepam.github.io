@@ -21,7 +21,7 @@
 title: Jen Wilson
 email: jenwils@uw.edu
 description: >- # this means to ignore newlines until "baseurl:"
-baseurl: "/zepam.github.io"
+baseurl: "http://zepam.github.io"
 url: "http://zepam.github.io" # the base hostname & protocol for your site
 github_username:  zepam
 linkedin_username: jenwils
