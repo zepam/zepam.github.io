@@ -45,7 +45,7 @@ title: Home
         {% endif %} -->
         <h2>{{talk.title}}</h2>
 
-        {{ talk.venue }}
+        <i>{{ talk.venue }}</i>
 
         {% if talk.date %}
           •
@@ -102,7 +102,7 @@ title: Home
     <li class="resume-item">
       <div class="authors">
       {% if paper.authors %}
-        <span class="authors"><b>{{ paper.authors | join: ", " }}. </b></span>
+        <span class="authors">{{ paper.authors | join: ", " }} </span>
       {% endif %}
       </div>
       <div class="resume-info">
@@ -111,7 +111,7 @@ title: Home
         {% else %}
           {{ paper.title }}
         {% endif %} -->
-        {{paper.title}}
+        <b>{{paper.title}}</b> •
       
         {{ paper.journal }}
         {% if paper.date %}
@@ -155,10 +155,10 @@ title: Home
         {% if poster.link %}
           <h2><a href="{{ poster.link | relative_url }}">{{ paper.title }}</a></h2>
         {% else %}
-          <i>{{ poster.title }}</i> •
+          <b>{{ poster.title }}</b> •
         {% endif %}
       
-        {{ poster.venue }}
+        <i>{{ poster.venue }}</i>
         {% if poster.date %}
           •
           {% assign parsed_date = poster.date | date: "%B %Y" %}

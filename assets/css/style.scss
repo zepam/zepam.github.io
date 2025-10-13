@@ -188,9 +188,9 @@ main.content {
 .project-content {
   overflow: hidden; /* contain floats */
 
-  img[src*="small"] { max-width: 400px; height: auto; }
-  img[src*="medium"] { max-width: 600px; height: auto; }
-  img[src*="large"] { max-width: 800px; height: auto; }
+  & img[src*="small"] { max-width: 400px; height: auto; }
+  & img[src*="medium"] { max-width: 600px; height: auto; }
+  & img[src*="large"] { max-width: 800px; height: auto; }
 }
 
 /* Right-aligned image */
@@ -204,6 +204,14 @@ main.content {
 /* Left-aligned image */
 .img-left {
   float: left;
+  width: 150px;          /* adjust size */
+  height: auto;
+  margin: 0 1rem 1rem 0; /* top/right/bottom/left */
+}
+
+/* Center-aligned image */
+.img-center {
+  // float: left;
   width: 150px;          /* adjust size */
   height: auto;
   margin: 0 1rem 1rem 0; /* top/right/bottom/left */

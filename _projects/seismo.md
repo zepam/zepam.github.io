@@ -6,4 +6,5 @@ description: Developing an Agentic AI system for seismic hazard analysis, integr
 The repo for this is private while we get it ready for public use.
 
 In the mean time, check out other work being done in the [Denolle Lab at the University of Washington](https://denolle-lab.github.io/)
-<img src="../assets/images/denolle-small.png" alt="Denolle Lab at UW" class="img-right">
+<br><br>
+<img src="../assets/images/denolle-small.png" alt="Denolle Lab at UW" class="img-left">
