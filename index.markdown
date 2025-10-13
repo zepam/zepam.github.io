@@ -8,7 +8,6 @@ title: Jen Wilson
 
 - M.S. Computational Linguistics <span class="vline">|</span> University of Washington, Seattle (in progress)
 - Graduate Certificate in Software Design and Development	<span class="vline">|</span> University of Washington, Bothell, WA
-<!-- - <span class="vline">|</span>June 2021  -->
 - B.S. Geological Sciences <span class="vline">|</span> University of Washington, Seattle
 - B.A. History <span class="vline">|</span> University of Washington, Seattle
 
