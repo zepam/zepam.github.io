@@ -42,6 +42,9 @@ collections:
   posters:
     output: true
     permalink: /posters/:title/
+  fun:
+    output: true
+    permalink: /fun/:title/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

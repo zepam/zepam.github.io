@@ -12,7 +12,7 @@ title: Jen Wilson
 - B.A. History <span class="vline">|</span> University of Washington, Seattle
 
 ---
-## Projects
+## Nerdy Projects
 
 <ul class="projects-list">
   {% for project in site.projects %}
@@ -112,7 +112,14 @@ title: Jen Wilson
         {% else %}
           {{ paper.title }}
         {% endif %} -->
-        <b>{{paper.title}}</b> •
+        {% assign paper_target = paper.link | default: paper.url %}
+        {% if paper.thumbnail %}
+          <a href="{{ paper_target | relative_url }}">
+            <img src="{{ paper.thumbnail | relative_url }}" alt="{{ paper.title }} thumbnail" class="project-thumb-right">
+          </a>
+        {% endif %}
+
+        <b><a href="{{ paper_target | relative_url }}" {% if paper.link %}target="_blank" rel="noopener"{% endif %}>{{ paper.title }}</a></b> •
       
         {{ paper.journal }}
         {% if paper.date %}
@@ -154,11 +161,11 @@ title: Jen Wilson
     <li class="resume-item">
       <div class="resume-info">
         {% if poster.link %}
-          <h2><a href="{{ poster.link | relative_url }}">{{ paper.title }}</a></h2>
+          <h2><a href="{{ poster.link | relative_url }}">{{ poster.title }}</a></h2>
         {% else %}
           <b>{{ poster.title }}</b> •
         {% endif %}
-      
+
         <i>{{ poster.venue }}</i>
         {% if poster.date %}
           •
@@ -170,11 +177,52 @@ title: Jen Wilson
           {% endif %}
         {% endif %}
 
+        {% if poster.thumbnail and poster.image %}
+          <a href="{{ poster.image | relative_url }}" target="_blank">
+            <img src="{{ poster.thumbnail | relative_url }}" alt="{{ poster.title }} poster" class="project-thumb-right">
+          </a>
+        {% endif %}
+
       {% if poster.description %}
         <p>{{ poster.description }}</p>
+      {% endif %}
+
+      {% if poster.image %}
+        <p><a href="{{ poster.image | relative_url }}" target="_blank">View poster</a></p>
       {% endif %}
       </div>
     </li>
   {% endfor %}
 </ul>
+
+---
+## Fun
+
+<ul class="projects-list fun-list">
+  {% assign fun_items = site.fun | sort: 'date' | reverse %}
+  {% if fun_items.size > 0 %}
+    {% for item in fun_items %}
+      {% assign target_url = item.link | default: item.url %}
+      <li class="project-item">
+        {% if item.thumbnail %}
+          <a href="{{ target_url | relative_url }}" {% if item.link %}target="_blank" rel="noopener"{% endif %}>
+            <img src="{{ item.thumbnail | relative_url }}" alt="{{ item.title }} thumbnail" class="project-thumb-right">
+          </a>
+        {% endif %}
+
+        <div class="project-info">
+          <h2>
+            <a href="{{ target_url | relative_url }}" {% if item.link %}target="_blank" rel="noopener"{% endif %}>{{ item.title }}</a>
+          </h2>
+          {% if item.description %}
+            <p>{{ item.description }}</p>
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  {% else %}
+    <li>No fun projects yet — check back later.</li>
+  {% endif %}
+</ul>
+
 
