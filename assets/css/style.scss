@@ -154,6 +154,7 @@ main.content {
     }
 
     .project-thumb-right {
+      /* keep nested rule minimal; primary rule is defined at top-level */
       float: right;           /* float thumbnail to the right */
       width: 120px;           /* thumbnail width */
       height: auto;
@@ -184,11 +185,21 @@ main.content {
   }
 }
 /* ========== project image styles ========== */
-  
+
 /* Make .project-thumb-right available globally so other lists (papers, posters)
    can reuse the same right-floating thumbnail style. This mirrors the
    nested rule above but applies it site-wide. */
 .project-thumb-right {
+  float: right;
+  width: 120px;
+  height: auto;
+  margin: 0 0 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+/* Ensure thumbnails inside resume lists also use the same class; kept
+   without !important so normal cascade rules apply. */
+.resume-list .project-thumb-right {
   float: right;
   width: 120px;
   height: auto;
