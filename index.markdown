@@ -6,10 +6,10 @@ title: Jen Wilson
 
 ### Education
 
-- <b>M.S. Computational Linguistics</b> <span class="vline">|</span> University of Washington, Seattle (in progress)
-- <b>Graduate Certificate in Software Design and Development</b>	<span class="vline">|</span> University of Washington, Bothell, WA
-- <b>B.S. Geological Sciences</b> <span class="vline">|</span> University of Washington, Seattle
-- <b>B.A. History</b> <span class="vline">|</span> University of Washington, Seattle
+- <b>M.S. Computational Linguistics <span class="vline">|</span> University of Washington, Seattle (in progress)
+- Graduate Certificate in Software Design and Development	<span class="vline">|</span> University of Washington, Bothell, WA
+- B.S. Geological Sciences <span class="vline">|</span> University of Washington, Seattle
+- B.A. History <span class="vline">|</span> University of Washington, Seattle
 
 ---
 ## Nerdy Projects
