@@ -12,7 +12,7 @@ title: Jen Wilson
 - B.A. History <span class="vline">|</span> University of Washington, Seattle
 
 ---
-## Nerdy Projects
+## Projects
 
 <ul class="projects-list">
   {% for project in site.projects %}
