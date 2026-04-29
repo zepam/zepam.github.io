@@ -1,8 +1,9 @@
 ---
 layout: default
+order: 2
 current: true
 title: Emergency Alert Translation and Generation Using LLMs 
-description: Designed and implemented a multilingual emergency-alert translation and generation pipeline integrating commercial MT and LLM APIs (OpenAI/Azure OpenAI, Google Gemini, DeepSeek, Google Translate, DeepL). Built an evaluation system to assess whether outputs are suitable for time-critical emergency use (e.g., clarity, fidelity, and risk flags). Partnered with emergency management officials to identify communication gaps and pilot AI-assisted crisis messaging workflows in operational contexts. Invited talk and poster.
+description: Design and implement a multilingual pipeline for emergency-alert translation and message generation, integrating commercial MT and LLM APIs (OpenAI/Azure OpenAI, Google Gemini, DeepSeek, Google Translate, DeepL). Develop an evaluation framework to determine whether outputs are safe and usable for time-critical alerts, including checks for clarity, fidelity, and potential risk flags. Collaborate with emergency management officials to identify communication gaps and pilot AI-assisted crisis messaging workflows in real operational settings. Invited talk and poster.
 thumbnail: ../assets/images/people.jpg
 ---
 <img src="../assets/images/paper_title.png" alt="Paper title" style="display:block; margin:0 auto; max-width:100%; height:auto; border:1px solid #ccc; padding:4px; box-sizing:border-box;">
