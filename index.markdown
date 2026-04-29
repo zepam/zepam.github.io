@@ -247,7 +247,11 @@ title: Jen Wilson
       {% endif %}
 
       <div class="project-info">
-        <h2><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
+        {% if project.no_second_page %}
+          <h2>{{ project.title }}</h2>
+        {% else %}
+          <h2><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
+        {% endif %}
         <p>{{ project.description }}</p>
       </div>
     </li>
