@@ -15,7 +15,8 @@ title: Jen Wilson
 ## Current Projects
 
 <ul class="projects-list">
-  {% for project in site.projects %}
+  {% assign sorted_projects = site.projects | sort: 'order' %}
+  {% for project in sorted_projects %}
     {% if project.current %}
     <li class="project-item">
       {% if project.thumbnail %}
@@ -102,7 +103,8 @@ title: Jen Wilson
 ## Published Papers
 
 <ul class="resume-list">
-  {% for paper in site.papers %}
+  {% assign sorted_papers = site.papers | sort: 'order' %}
+  {% for paper in sorted_papers %}
     <li class="resume-item">
       <div class="authors">
       {% if paper.authors %}
@@ -237,7 +239,7 @@ title: Jen Wilson
 ## Past Projects
 
 <ul class="projects-list">
-  {% for project in site.projects %}
+  {% for project in sorted_projects %}
     {% unless project.current %}
     <li class="project-item">
       {% if project.thumbnail %}
