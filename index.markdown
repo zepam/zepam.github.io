@@ -6,7 +6,7 @@ title: Jen Wilson
 
 ### Education
 
-- <b>M.S. Computational Linguistics <span class="vline">|</span> University of Washington, Seattle (in progress)
+- <b>M.S. Computational Linguistics <span class="vline">|</span> University of Washington, Seattle <span class="vline">|</span> June 2026</b>
 - Graduate Certificate in Software Design and Development	<span class="vline">|</span> University of Washington, Bothell, WA
 - B.S. Geological Sciences <span class="vline">|</span> University of Washington, Seattle
 - B.A. History <span class="vline">|</span> University of Washington, Seattle
@@ -21,7 +21,7 @@ title: Jen Wilson
     <li class="project-item">
       {% if project.thumbnail %}
         <a href="{{ project.url | relative_url }}">
-          <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }} thumbnail" class="project-thumb-right">
+          <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }} thumbnail" class="project-thumb-right" {% if project.image_source %}title="Image source: {{ project.image_source }}"{% endif %}>
         </a>
       {% endif %}
 
@@ -244,7 +244,7 @@ title: Jen Wilson
     <li class="project-item">
       {% if project.thumbnail %}
         <a href="{{ project.url | relative_url }}">
-          <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }} thumbnail" class="project-thumb-right">
+          <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }} thumbnail" class="project-thumb-right" {% if project.image_source %}title="Image source: {{ project.image_source }}"{% endif %}>
         </a>
       {% endif %}
 

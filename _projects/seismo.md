@@ -5,6 +5,7 @@ current: false
 no_second_page: true
 description: Member of team developing an Agentic AI system for seismic hazard analysis, integrating multi-agent workflows - literature synthesis, phase picking with SeisBench, event association/location with PyOcto, and visualization. Combining earthquake catalogs, scientific literature, deep learning models, and physical laws to enable automated synthesis, hypothesis generation, and iterative model refinement.
 thumbnail: ../assets/images/denolle-small.png
+image_source: https://denolle-lab.github.io/
 ---
 The repo for this is private while we get it ready for public use.
 
