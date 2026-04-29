@@ -12,10 +12,11 @@ title: Jen Wilson
 - B.A. History <span class="vline">|</span> University of Washington, Seattle
 
 ---
-## Nerdy Projects
+## Current Projects
 
 <ul class="projects-list">
   {% for project in site.projects %}
+    {% if project.current %}
     <li class="project-item">
       {% if project.thumbnail %}
         <a href="{{ project.url | relative_url }}">
@@ -28,8 +29,11 @@ title: Jen Wilson
         <p>{{ project.description }}</p>
       </div>
     </li>
+    {% endif %}
   {% endfor %}
 </ul>
+
+
 
 ---
 ## Invited Talks and Presentations
@@ -49,7 +53,6 @@ title: Jen Wilson
         <i>{{ talk.venue }}</i>
 
         {% if talk.date %}
-          •
           {% assign parsed_date = talk.date | date: "%B %Y" %}
           {% if parsed_date contains "0001" or parsed_date == "" %}
             {{ talk.date }}
@@ -113,17 +116,18 @@ title: Jen Wilson
           {{ paper.title }}
         {% endif %} -->
         {% assign paper_target = paper.link | default: paper.url %}
+
         {% if paper.thumbnail %}
           <a href="{{ paper_target | relative_url }}">
             <img src="{{ paper.thumbnail | relative_url }}" alt="{{ paper.title }} thumbnail" class="project-thumb-right">
           </a>
         {% endif %}
 
-        <b><a href="{{ paper_target | relative_url }}" {% if paper.link %}target="_blank" rel="noopener"{% endif %}>{{ paper.title }}</a></b> •
-      
+        <b><a href="{{ paper_target | relative_url }}" {% if paper.link %}target="_blank" rel="noopener"{% endif %}>{{ paper.title }}</a></b>
+      <br>
         {{ paper.journal }}
         {% if paper.date %}
-          •
+
           {% assign parsed_date = paper.date | date: "%B %Y" %}
           {% if parsed_date contains "0001" or parsed_date == "" %}
             {{ paper.date }}.
@@ -137,6 +141,7 @@ title: Jen Wilson
         {{ paper.description }}
       {% endif %}
       {% if paper.link %}
+              <br>
         <span style="color: #007acc; font-weight: normal;">
           <a href="{{ paper.link | relative_url }}" 
             target="_blank" 
@@ -147,6 +152,7 @@ title: Jen Wilson
             {{paper.link}}
           </a>
         </span>
+
     {% endif %}
     </div>
     </li>
@@ -195,6 +201,8 @@ title: Jen Wilson
   {% endfor %}
 </ul>
 
+
+
 ---
 ## Fun
 
@@ -223,6 +231,28 @@ title: Jen Wilson
   {% else %}
     <li>No fun projects yet — check back later.</li>
   {% endif %}
+</ul>
+
+---
+## Past Projects
+
+<ul class="projects-list">
+  {% for project in site.projects %}
+    {% unless project.current %}
+    <li class="project-item">
+      {% if project.thumbnail %}
+        <a href="{{ project.url | relative_url }}">
+          <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }} thumbnail" class="project-thumb-right">
+        </a>
+      {% endif %}
+
+      <div class="project-info">
+        <h2><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
+        <p>{{ project.description }}</p>
+      </div>
+    </li>
+    {% endunless %}
+  {% endfor %}
 </ul>
 
 
