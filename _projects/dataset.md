@@ -3,7 +3,7 @@ layout: default
 order: 1
 current: true
 title: "WARN Corpus: A Multilingual Parallel Corpus of Emergency Warnings and Translations"
-description: This resource is a curated collection of pre‑translated, agency‑sourced emergency alerts intended to enable practitioners and researchers to deploy accurate multilingual messages more rapidly. It includes validated templates, anonymized per‑language summaries, and (soon) baseline evaluation checks to support systematic testing, comparative evaluation, and the improvement of translation workflows and models for safety‑critical communication.
+description: This resource is a curated collection of pre‑translated, agency‑sourced emergency alerts intended to enable practitioners and researchers to deploy accurate multilingual messages more rapidly. It includes validated templates, anonymized per‑language summaries, and (soon) baseline evaluation checks to support systematic testing, comparative evaluation, and the improvement of translation workflows and models for safety‑critical communication. Manuscript in preparation.
 thumbnail: ../assets/images/warn.jpg
 ---
 
