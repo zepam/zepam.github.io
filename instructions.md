@@ -1,34 +1,62 @@
-Use Jekyll locally for previewing without deploying.
+## Quick start — preview locally
 
-In terminal, go to the repo directory:
-`cd zepam.github.io`
+1. Open a terminal and change into the repo:
 
-~~Install dependencies once: bundle install~~
+  `cd YOUR-GITHUB-USERNAME.github.io`
 
-Run local server:
-`bundle exec jekyll serve --livereload`
+2. Start the local Jekyll server with live reload:
 
-Open:
-http://127.0.0.1:4000
+  `bundle exec jekyll serve --livereload`
 
+3. Open the site in your browser:
 
-------
+  http://127.0.0.1:4000
 
-This site is a <a href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll">Jekyll</a> <a href="https://pages.github.com/">GitHub Pages</a> site. 
-Content is in Markdown files. Style is in style.scss. 
+## What is this site?
 
-Jekyll reads front matter and Liquid templates then GitHub Pages serves the generated static HTML. The shared template is `_layouts/default.html` and the styling comes from `style.scss`, which imports the selected Jekyll theme and then overrides the look and feel.
+This repository is a Jekyll-powered GitHub Pages site. Content is written in Markdown and rendered by Jekyll using Liquid templates. Styles are authored in `assets/css/style.scss` and compiled into the final site.
 
-Homepage: `index.markdown.` This file loops over Jekyll collections as defined in `_config.yml`: projects, talks, papers, posters, and fun. Each item file in folders stores data such as title, date, thumbnail, description, and external links. The homepage uses that metadata to render the files into formatted text.
+Key points:
 
-Page-by-page, the site works like this:
+- Templates live in `_layouts/` (shared layout: `_layouts/default.html`).
+- Shared header/footer in `_includes/header.html` and `_includes/footer.html`.
+- Collections are stored in folders like `_projects/`, `_talks/`, `_papers/`, `_posters/`, and `_fun/`.
+- Per-page metadata (title, date, thumbnail, links, etc.) is set in each item's front matter.
+  - What is front matter? Any file that contains a YAML front matter block will be processed by Jekyll as a special file. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. [source](https://jekyllrb.com/docs/front-matter/)
 
-`/` comes from `index.markdown` and shows Education, Current Projects, Talks, Papers, Posters, Fun, and Past Projects.
+## Site structure (short)
 
-`/projects/...` pages are generated from the files in `_projects/`, with each markdown file becoming its own project page.
+- Homepage: `index.markdown` — loops over collections and renders Education, Current Projects, Talks, Papers, Posters, Fun, and Past Projects.
+- Project pages: generated from files in `_projects/`.
+- Papers, talks, posters, fun: each collection builds its own pages according to `_config.yml` permalink rules.
 
-`/papers/...`, `/talks/...`, `/posters/...`, and `/fun/...` are generated from the corresponding collection folders, with custom permalink rules set in `_config.yml`.
+## How to add content
 
-The top bar and footer are shared includes from `header.html` and `footer.html`.
+- Create a new markdown file in the appropriate collection folder (for example `_projects/` or `_talks/`).
+- Add YAML front matter at the top, e.g.:
 
-A small bit of JavaScript in default.html makes images inside project content clickable, but the site is otherwise primarily static HTML generated at build time.
+```yaml
+---
+title: "My Project"
+date: 2025-06-01
+thumbnail: /assets/img/my-project-thumb.png
+description: "Short one-line description."
+---
+```
+
+The homepage reads these fields and shows items automatically.
+
+## Styling and assets
+
+- Main CSS: `assets/css/style.scss`.
+- Fonts, images, and JS are under `assets/` and `_site/assets/` after building.
+
+## Deployment
+
+This site is hosted with [GitHub Pages](https://docs.github.com/en/pages). The simplest deployment is automatic: push your changes to the publishing branch (usually `main`) and GitHub Pages will build the Jekyll site.
+
+[GitHub Pages for Beginners](https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-pages/)
+
+[Getting Started with GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+
+🧪 [Jekyll](https://jekyllrb.com/)
