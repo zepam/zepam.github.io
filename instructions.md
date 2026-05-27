@@ -49,7 +49,7 @@ The homepage reads these fields and shows items automatically.
 ## Styling and assets
 
 - Main CSS: `assets/css/style.scss`.
-- Fonts, images, and JS are under `assets/` and `_site/assets/` after building.
+- Fonts, images, and PDFs are under `assets/`
 
 ## Deployment
 
