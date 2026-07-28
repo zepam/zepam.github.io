@@ -51,6 +51,12 @@ title: Jen Wilson
         {% endif %} -->
         <h2>{{talk.title}}</h2>
 
+        {% if talk.thumbnail %}
+          <a href="{{ talk.url | relative_url }}">
+          <img src="{{ talk.thumbnail | relative_url }}" alt="{{ talk.title }} thumbnail" class="project-thumb-right" {% if talk.image_source %}title="Image source: {{ talk.image_source }}"{% endif %}>
+         </a>
+        {% endif %}
+
         <i>{{ talk.venue }}</i>
 
         {% if talk.date %}
@@ -93,6 +99,8 @@ title: Jen Wilson
       {% if talk.recording %}
         <a href="{{ talk.recording }}" target="_blank">Recording</a>
       {% endif %}
+
+
 
       </div>
     </li>
