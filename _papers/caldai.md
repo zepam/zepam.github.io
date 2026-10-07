@@ -1,6 +1,6 @@
 ---
 layout: item
-order: 2
+order: 3
 authors: 
         -  Wilson J
         -  Lhawa Y

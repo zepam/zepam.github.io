@@ -34,6 +34,67 @@ title: Jen Wilson
   {% endfor %}
 </ul>
 
+---
+## Published Papers
+
+<ul class="resume-list">
+  {% assign sorted_papers = site.papers | sort: 'order' %}
+  {% for paper in sorted_papers %}
+    <li class="resume-item">
+      <div class="authors">
+      {% if paper.authors %}
+        <span class="authors">{{ paper.authors | join: ", " }} </span>
+      {% endif %}
+      </div>
+      <div class="resume-info">
+        <!-- {% if paper.link %}
+          <h2><a href="{{ paper.link | relative_url }}">{{ paper.title }}</a></h2>
+        {% else %}
+          {{ paper.title }}
+        {% endif %} -->
+        {% assign paper_target = paper.link | default: paper.url %}
+
+        {% if paper.thumbnail %}
+          <a href="{{ paper_target | relative_url }}">
+            <img src="{{ paper.thumbnail | relative_url }}" alt="{{ paper.title }} thumbnail" class="project-thumb-right">
+          </a>
+        {% endif %}
+
+        <b><a href="{{ paper_target | relative_url }}" {% if paper.link %}target="_blank" rel="noopener"{% endif %}>{{ paper.title }}</a></b>
+      <br>
+        {{ paper.journal }}
+        {% if paper.date %}
+
+          {% assign parsed_date = paper.date | date: "%B %Y" %}
+          {% if parsed_date contains "0001" or parsed_date == "" %}
+            {{ paper.date }}.
+          {% else %}
+            {{ parsed_date }}.
+          {% endif %}
+        {% endif %}
+      
+
+      {% if paper.description %}
+        {{ paper.description }}
+      {% endif %}
+      {% if paper.link %}
+              <br>
+        <span style="color: #007acc; font-weight: normal;">
+          <a href="{{ paper.link | relative_url }}" 
+            target="_blank" 
+            style="color: #007acc; text-decoration: none; font-weight: normal;"
+            onmouseover="this.style.textDecoration='none'; this.style.color='#007acc';"
+            onmouseout="this.style.textDecoration='none'; this.style.color='#007acc';"
+            >
+            {{paper.link}}
+          </a>
+        </span>
+
+    {% endif %}
+    </div>
+    </li>
+  {% endfor %}
+</ul>
 
 
 ---
@@ -107,67 +168,6 @@ title: Jen Wilson
   {% endfor %}
 </ul>
 
----
-## Published Papers
-
-<ul class="resume-list">
-  {% assign sorted_papers = site.papers | sort: 'order' %}
-  {% for paper in sorted_papers %}
-    <li class="resume-item">
-      <div class="authors">
-      {% if paper.authors %}
-        <span class="authors">{{ paper.authors | join: ", " }} </span>
-      {% endif %}
-      </div>
-      <div class="resume-info">
-        <!-- {% if paper.link %}
-          <h2><a href="{{ paper.link | relative_url }}">{{ paper.title }}</a></h2>
-        {% else %}
-          {{ paper.title }}
-        {% endif %} -->
-        {% assign paper_target = paper.link | default: paper.url %}
-
-        {% if paper.thumbnail %}
-          <a href="{{ paper_target | relative_url }}">
-            <img src="{{ paper.thumbnail | relative_url }}" alt="{{ paper.title }} thumbnail" class="project-thumb-right">
-          </a>
-        {% endif %}
-
-        <b><a href="{{ paper_target | relative_url }}" {% if paper.link %}target="_blank" rel="noopener"{% endif %}>{{ paper.title }}</a></b>
-      <br>
-        {{ paper.journal }}
-        {% if paper.date %}
-
-          {% assign parsed_date = paper.date | date: "%B %Y" %}
-          {% if parsed_date contains "0001" or parsed_date == "" %}
-            {{ paper.date }}.
-          {% else %}
-            {{ parsed_date }}.
-          {% endif %}
-        {% endif %}
-      
-
-      {% if paper.description %}
-        {{ paper.description }}
-      {% endif %}
-      {% if paper.link %}
-              <br>
-        <span style="color: #007acc; font-weight: normal;">
-          <a href="{{ paper.link | relative_url }}" 
-            target="_blank" 
-            style="color: #007acc; text-decoration: none; font-weight: normal;"
-            onmouseover="this.style.textDecoration='none'; this.style.color='#007acc';"
-            onmouseout="this.style.textDecoration='none'; this.style.color='#007acc';"
-            >
-            {{paper.link}}
-          </a>
-        </span>
-
-    {% endif %}
-    </div>
-    </li>
-  {% endfor %}
-</ul>
 
 ---
 ## Posters
