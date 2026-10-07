@@ -75,7 +75,7 @@ title: Jen Wilson
       
 
       {% if paper.description %}
-        {{ paper.description }}
+        <p><br><span class="paper-abstract">{{ paper.description }}</span></p>
       {% endif %}
       {% if paper.link %}
               <br>
@@ -95,7 +95,6 @@ title: Jen Wilson
     </li>
   {% endfor %}
 </ul>
-
 
 ---
 ## Invited Talks and Presentations
@@ -167,7 +166,6 @@ title: Jen Wilson
     </li>
   {% endfor %}
 </ul>
-
 
 ---
 ## Posters
